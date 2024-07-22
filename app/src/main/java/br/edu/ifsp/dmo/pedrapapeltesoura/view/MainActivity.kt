@@ -33,6 +33,11 @@ class MainActivity : AppCompatActivity() {
         binding.spinnerBattles.adapter = adapter
     }
 
+    private fun configToolBar(){
+        //Esconder a ActionBar se ela existir no tema.
+        supportActionBar?.hide()
+    }
+
     private fun startGame(){
         val battles: Int = when (binding.spinnerBattles.selectedItemPosition){
             0 -> 1
